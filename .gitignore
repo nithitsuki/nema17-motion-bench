@@ -1,0 +1,18 @@
+# PlatformIO build output
+.pio/
+firmware/.pio/
+.vscode/
+
+# KiCad local and backup files
+*.kicad_prl
+*-backups/
+_autosave-*
+*.kicad_pcb-bak
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# OS
+.DS_Store

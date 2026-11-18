@@ -1,0 +1,46 @@
+manufacturer,model,step_angle_deg,body_length_mm,rated_voltage_V,rated_current_A,phase_resistance_ohm,phase_inductance_mH,holding_torque_Ncm,detent_torque_Ncm,rotor_inertia_gcm2,leads,mass_g,source_file,notes
+Ningbo Leison,17HS0410,1.8,20,,0.8,3.8,4.5,10,1.2,24,4,120,Leison-17HS-series.pdf,
+Ningbo Leison,17HS2408,1.8,28,,0.6,8,10,12,1.6,30,4,150,Leison-17HS-series.pdf,
+Ningbo Leison,17HS3401,1.8,34,,1.3,2.4,2.8,28,1.6,34,4,220,Leison-17HS-series.pdf,
+Ningbo Leison,17HS3410,1.8,34,,1.7,1.2,1.8,28,1.6,34,4,220,Leison-17HS-series.pdf,
+MotionKing,17HS3430,1.8,34,,0.4,30,35,28,1.6,34,4,220,MotionKing-17HS-series-catalog.pdf,
+MotionKing,17HS3630,1.8,34,,0.4,30,18,21,1.6,34,6,220,MotionKing-17HS-series-catalog.pdf,
+MotionKing,17HS3616,1.8,34,,0.16,75,40,14,1.6,34,6,220,MotionKing-17HS-series-catalog.pdf,
+StepperOnline,17HS08-1004S,1.8,20,3.5,1.0,3.5,4.5,13,,15,4,150,StepperOnline-17HS08-1004S-pancake.pdf,
+Adafruit,XY42STH34-0354A,1.8,34,12,0.35,34,33,15.7,1.18,35,4,220,Adafruit-324-datasheet.pdf,Vendor page lists 35 ohm and 2 kg-cm
+Trinamic,QSH4218-35-10-027,1.8,33.5,5.3,1.0,5.3,6.6,27,0.22,35,4,220,Trinamic-QSH4218-manual.pdf,
+Trinamic,QSH4218-41-10-035,1.8,38,4.5,1.0,4.5,7.5,35,0.25,54,4,280,Trinamic-QSH4218-manual.pdf,
+Trinamic,QSH4218-51-10-049,1.8,47,5.0,1.0,5.0,8.0,49,0.28,68,4,350,Trinamic-QSH4218-manual.pdf,
+Trinamic,QSH4218-47-28-040,1.8,47,1.4,2.8,0.5,0.6,40,,68,4,350,Trinamic-QSH4218-manual.pdf,
+Ningbo Leison,17HS4401,1.8,40,,1.7,1.5,2.8,40,2.2,54,4,280,Leison-17HS-series.pdf,
+Handson,17HS4401S,1.8,40,2.6,1.7,1.5,2.8,43,,54,4,280,Handson-17HS4401S.pdf,
+Ningbo Leison,17HS4402,1.8,40,,1.3,2.5,5.0,40,2.2,54,4,280,Leison-17HS-series.pdf,
+Ningbo Leison,17HS4602,1.8,40,,1.2,3.2,2.8,28,2.2,54,6,280,Leison-17HS-series.pdf,
+MotionKing,17HS4630,1.8,40,,0.4,30,28,28,2.2,54,6,280,MotionKing-17HS-series-catalog.pdf,
+Pololu,SY42STH38-1684A,1.8,38,2.8,1.68,1.65,3.2,36,,,4,285,Pololu-2267-SY42STH38-1684A.pdf,Pololu item 2267
+MOONS,MS17HD4P4100,1.8,34.3,,1.0,4.2,7.5,33,0.12,38,4,210,Moons-MS17HA-MS17HD-series.pdf,
+MOONS,MS17HD2P4100,1.8,39.8,,1.0,3.9,8.9,48,0.15,57,4,280,Moons-MS17HA-MS17HD-series.pdf,
+StepperOnline,17HS19-2004S1,1.8,48,2.8,2.0,1.4,3.0,59,,82,4,400,StepperOnline-17HS19-2004S1.pdf,Drawing lists 1.40 ohm; product page lists 1.6 ohm
+Ningbo Leison,17HS8401,1.8,48,,1.7,1.8,3.2,52,2.6,68,4,350,Leison-17HS-series.pdf,
+Ningbo Leison,17HS8402,1.8,48,,1.3,3.2,5.5,52,2.6,68,4,350,Leison-17HS-series.pdf,
+Ningbo Leison,17HS8403,1.8,48,,2.3,1.2,1.6,46,2.6,68,4,350,Leison-17HS-series.pdf,
+Ningbo Leison,17HS8630,1.8,48,,0.4,30,38,34,2.6,68,6,350,Leison-17HS-series.pdf,
+Pololu,SY42STH47-1206A,1.8,48,4,1.2,3.3,2.8,31.1,2.0,68,6,365,Pololu-1200-SY42STH47-1206A.pdf,Pololu item 1200
+LDO,LDO-42STH25-0404,1.8,25,9.6,0.4,24,36,16.7,,20,4,150,LDO-42STH-series-info-sheet.pdf,
+LDO,LDO-42STH33-1334,1.8,34,2.8,1.33,2.1,2.5,21.6,,35,4,220,LDO-42STH-series-info-sheet.pdf,
+LDO,LDO-42STH38-1684,1.8,40,2.8,1.68,1.65,3.2,35.3,,54,4,280,LDO-42STH-series-info-sheet.pdf,LDO table lists 40 mm body
+LDO,LDO-42STH47-1206,1.8,48,4,1.2,3.3,2.8,31.1,,68,6,350,LDO-42STH-series-info-sheet.pdf,
+LDO,LDO-42STH47-1684,1.8,48,2.8,1.68,1.65,2.8,43.2,,68,4,350,LDO-42STH-series-info-sheet.pdf,
+LDO,LDO-42STH48-2504AC,1.8,48,3.0,2.5,1.2,1.5,55,0.2,,4,350,LDO-42STH48-2504AC-drawing.pdf,
+LDO,LDO-42STH60-1206,1.8,60,7.2,1.2,6,7,63.7,,102,6,500,LDO-42STH-series-info-sheet.pdf,
+MOONS,MS17HD5P4100,1.8,25.3,,1.0,3.2,3.2,21,0.05,20,4,150,Moons-MS17HA-MS17HD-series.pdf,
+MOONS,MS17HD6P4100,1.8,48.3,,1.0,4.9,11.5,63,0.25,82,4,360,Moons-MS17HA-MS17HD-series.pdf,
+MOONS,MS17HDBP4100,1.8,62.8,,1.0,5.6,14.6,82,0.3,123,4,600,Moons-MS17HA-MS17HD-series.pdf,
+Ningbo Leison,17HS9403,1.8,60,,2.3,1.4,2.5,70,3.6,80,4,480,Leison-17HS-series.pdf,
+Ningbo Leison,17HS6403,1.8,63,,2.3,1.5,2.2,80,4.0,85,4,500,Leison-17HS-series.pdf,
+Lin Engineering,4209S-01P,0.9,34,,1.33,2.4,4.6,22,,35,4,200,LinEngineering-4209-0.9deg.pdf,Parallel winding
+Lin Engineering,4209M-01P,0.9,39.9,,1.68,1.5,3.8,36,,55,4,254,LinEngineering-4209-0.9deg.pdf,Parallel winding
+Lin Engineering,4209L-01P,0.9,48,,1.7,1.9,5.3,44,,68,4,318,LinEngineering-4209-0.9deg.pdf,Parallel winding
+MOONS,MS17HA4P4100,0.9,34.3,,1.0,4.0,11.4,30,0.12,38,4,210,Moons-MS17HA-MS17HD-series.pdf,
+MOONS,MS17HA2P4100,0.9,39.8,,1.0,4.0,9.7,42,0.16,57,4,280,Moons-MS17HA-MS17HD-series.pdf,
+MOONS,MS17HA6P4100,0.9,48.3,,1.0,4.9,17.6,56,0.25,82,4,350,Moons-MS17HA-MS17HD-series.pdf,
