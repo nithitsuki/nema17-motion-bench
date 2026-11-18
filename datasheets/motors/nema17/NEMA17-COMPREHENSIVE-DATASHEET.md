@@ -1,7 +1,7 @@
 # NEMA 17 stepper motor: comprehensive datasheet reference
 
 Compiled on 2026-11-12. All values come from the manufacturer files in
-[`datasheets/`](datasheets/). The source file for each value is named in
+[this directory](.). The source file for each value is named in
 the section.
 
 ## 1. Scope
@@ -58,7 +58,7 @@ not the pattern above:
 | Pilot | 0.8661 in (22 mm) | 22 mm |
 | Thread | 4-40 UNC | M3 |
 
-Source: `NEMA-ICS16-2001-flange-17-excerpt.pdf`, Table 4.
+Source: `../../standards/NEMA-ICS16-2001-flange-17-excerpt.pdf`, Table 4.
 
 The stepper industry uses the 42.3 mm / 31 mm / M3 pattern and keeps the
 "NEMA 17" nickname. Treat the name as a faceplate size only. Always use
@@ -540,19 +540,19 @@ or a fan helps. Do not exceed the insulation class.
 | `Moons-MS17HA-MS17HD-series.pdf` | 8 | MOONS' | 0.9° and 1.8°, 25 mm to 63 mm |
 | `LinEngineering-4209-0.9deg.pdf` | 2 | Lin Engineering | 0.9°, series/parallel windings |
 | `Adafruit-324-datasheet.pdf` | 1 | Adafruit / XY | 34 mm, 0.35 A |
-| `NEMA-ICS16-2001-flange-17-excerpt.pdf` | 2 | NEMA | Official flange 17 table |
+| `../../standards/NEMA-ICS16-2001-flange-17-excerpt.pdf` | 2 | NEMA | Official flange 17 table |
 
 ## 10. Sources and checks
 
 Each PDF is the publisher file, except where noted below. The source URL,
 publisher, page count, and SHA-256 are in
-[`datasheets/SOURCES.md`](datasheets/SOURCES.md).
+[`../../SOURCES.md`](../../SOURCES.md).
 
 Changes made during collection:
 
 - `Moons-MS17HA-MS17HD-series.pdf` is an 8-page extract of the MOONS'
   catalogue (pages 33 to 40).
-- `NEMA-ICS16-2001-flange-17-excerpt.pdf` is a 2-page extract of
+- `../../standards/NEMA-ICS16-2001-flange-17-excerpt.pdf` is a 2-page extract of
   NEMA ICS 16-2001 (pages 59 and 60).
 - `Adafruit-324-datasheet.pdf` is the Adafruit JPG converted to PDF. The
   image is unchanged.
@@ -560,7 +560,7 @@ Changes made during collection:
 Check the files:
 
 ```sh
-cd datasheets
+cd ../..
 sha256sum -c SHA256SUMS.txt
 ```
 

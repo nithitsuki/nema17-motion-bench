@@ -1,4 +1,0 @@
-(sym_lib_table
-	(version 7)
-	(lib (name "NEMA17_TMC2209")(type "KiCad")(uri "${KIPRJMOD}/NEMA17_TMC2209.kicad_sym")(options "")(descr "Project symbols for this design"))
-)

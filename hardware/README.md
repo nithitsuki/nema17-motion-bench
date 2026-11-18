@@ -1,22 +1,58 @@
-# NEMA 17 + TMC2209 + WeAct STM32G474CEU6
+# Hardware
 
-This project contains a KiCad schematic for one stepper axis. The axis uses a
-JK42HS48-1684-03F NEMA 17 motor, a BIGTREETECH TMC2209 V1.3 driver module, and
-a WeAct Studio STM32G474CEU6 "Long" board.
+This directory holds the KiCad designs and the board pinouts. The current
+design is one stepper axis. The axis uses a JK42HS48-1684-03F NEMA 17 motor,
+a BIGTREETECH TMC2209 V1.3 driver module, and a WeAct Studio STM32G474CEU6
+"Long" board.
+
+## Index
+
+| Path | Contents |
+|---|---|
+| [`kicad/axis-tmc2209/`](kicad/axis-tmc2209/) | Schematic, project file, PDF plot, symbol table |
+| [`kicad/lib/`](kicad/lib/) | Shared project symbols |
+| [`pinouts/`](pinouts/) | WeAct STM32G474CEU6 pin map and board sources |
+
+## Status
+
+The design has one axis and one TMC2209 socket. The electrical rules check
+reports 0 errors and 0 warnings. The PDF plot matches the current schematic.
 
 ## Files
 
 | File | Contents |
 |---|---|
-| `NEMA17-TMC2209.kicad_sch` | The schematic. Open this file in KiCad 9 or 10. |
-| `NEMA17-TMC2209.pdf` | A PDF plot of the schematic. |
-| `NEMA17-TMC2209.kicad_pro` | The KiCad project file. |
-| `NEMA17_TMC2209.kicad_sym` | The two project symbols: the WeAct header and the driver socket. |
-| `sym-lib-table` | The symbol library table for the project. |
+| `kicad/axis-tmc2209/NEMA17-TMC2209.kicad_sch` | The schematic. Open this file in KiCad 9 or 10. |
+| `kicad/axis-tmc2209/NEMA17-TMC2209.pdf` | A PDF plot of the schematic. |
+| `kicad/axis-tmc2209/NEMA17-TMC2209.kicad_pro` | The KiCad project file. |
+| `kicad/axis-tmc2209/sym-lib-table` | The symbol library table for the project. |
+| `kicad/lib/NEMA17_TMC2209.kicad_sym` | The two shared symbols: the WeAct header and the driver socket. |
+
+## Open and check
+
+From the repository root, open the project:
+
+```sh
+kicad hardware/kicad/axis-tmc2209/NEMA17-TMC2209.kicad_pro
+```
+
+Run the electrical rules check:
+
+```sh
+cd hardware/kicad/axis-tmc2209
+kicad-cli sch erc --severity-all NEMA17-TMC2209.kicad_sch
+```
+
+Export a PDF:
+
+```sh
+cd hardware/kicad/axis-tmc2209
+kicad-cli sch export pdf -o NEMA17-TMC2209.pdf NEMA17-TMC2209.kicad_sch
+```
 
 ## Motor data
 
-Source: `../datasheets/JK42HS48-1684-03F NEMA17 5.5 kg-cm Stepper Motor - D-Type Shaft-Nema-17.pdf`.
+Source: `../datasheets/motors/nema17/JK42HS48-1684-03F NEMA17 5.5 kg-cm Stepper Motor - D-Type Shaft-Nema-17.pdf`.
 
 | Item | Value |
 |---|---|
@@ -49,8 +85,8 @@ The vendor product title says 5.5 kg·cm. The manufacturer drawing says
 
 ## Driver module
 
-Source: `../datasheets/Trinamic-TMC2209-datasheet-rev1.09.pdf` and
-`../datasheets/Pinout-of-Circuit-TMC2209.png`.
+Source: `../datasheets/drivers/tmc2209/Trinamic-TMC2209-datasheet-rev1.09.pdf`
+and `../datasheets/drivers/tmc2209/BTT-TMC2209-V1.3-pinout.png`.
 
 The module is a BIGTREETECH TMC2209 V1.3. It uses the A4988 StepStick pinout.
 
@@ -118,9 +154,9 @@ I_RMS = 0.707 × VREF
 
 Set the VREF potentiometer to 1.68 V. This gives 1.19 A RMS.
 
-The motor is rated 1.68 A per phase. The compiled reference in this folder
-recommends 0.707 × I_rated for a chopper driver. This value also stays below
-the 1.4 A RMS module rating.
+The motor is rated 1.68 A per phase. The compiled reference in
+`../datasheets/motors/nema17/` recommends 0.707 × I_rated for a chopper
+driver. This value also stays below the 1.4 A RMS module rating.
 
 Do not set VREF above 2.37 V (1.68 A RMS) unless the motor case stays below
 80 °C. Measure VREF at TP2.
@@ -157,6 +193,10 @@ the TX pin is isolated from PDN_UART. Use pin 12 for both directions.
 The socket is two 1×8 female headers. Use 2.54 mm pitch. Set the row spacing to
 15.24 mm (0.6 in).
 
+The socket accepts the BIGTREETECH TMC2209 V1.3 module. That module uses the
+A4988-style pinout. The socket does not accept the Trinamic SilentStepStick
+V2.0 without an adapter. Check the module label before you insert a board.
+
 The module orientation:
 
 - Pin 1 is GND at the bottom right.
@@ -166,28 +206,10 @@ The module orientation:
 
 The module also has a 1×3 aux header J2. The order is INDEX, DIAG, VREF.
 
-## Checks
-
-Run the electrical rules check:
-
-```sh
-cd hardware
-kicad-cli sch erc --severity-all NEMA17-TMC2209.kicad_sch
-```
-
-The current schematic reports 0 errors and 0 warnings.
-
-Export a PDF:
-
-```sh
-cd hardware
-kicad-cli sch export pdf -o NEMA17-TMC2209.pdf NEMA17-TMC2209.kicad_sch
-```
-
 ## Limits
 
-- The WeAct board pinout comes from the WeAct GitHub repository. This folder
-  has no STM32G4 datasheet.
+- The WeAct board pinout comes from the WeAct schematic and the STM32G474xE
+  datasheet in `../datasheets/mcu/weact-stm32g474ceu6/`.
 - The U1 symbol shows only the header pins that this design uses. Read the
   silkscreen name in brackets. For example, `PA0/A0` is the pad marked `A0`.
 - The schematic has no reverse polarity protection and no overvoltage
@@ -195,3 +217,9 @@ kicad-cli sch export pdf -o NEMA17-TMC2209.pdf NEMA17-TMC2209.kicad_sch
 - The current values are calculated from datasheet formulas. Measure the real
   current before you run the motor for a long time.
 - Connect the motor before you apply VM. Do not hot-plug the motor.
+
+## Future
+
+- Add TB6600 wiring notes. The module needs 5 V logic and a DIP current setting.
+- Add a CoreXY board with two TMC2209 sockets.
+- Add endstop connectors and a 5 V logic header for the TB6600.

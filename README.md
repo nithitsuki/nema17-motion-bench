@@ -1,59 +1,47 @@
-# NEMA 17 datasheet library
+# NEMA 17 motion bench
 
-This directory holds a set of manufacturer datasheets for NEMA 17
-stepper motors. It also holds one compiled reference document.
+This repository is the catch-all for NEMA 17 motor experiments. It holds the
+source documents, the KiCad designs, and the firmware for each bench setup.
 
-No motor part number was given for this project. The library therefore
-covers the common NEMA 17 families. Use the identification guide in the
-reference document to find the sheet that matches your motor.
+## Current setup
 
-## Project
+| Item | Part |
+|---|---|
+| Motor | JK42HS48-1684-03F, 1.8°, 1.68 A per phase, 48 mm body |
+| Driver | BIGTREETECH TMC2209 V1.3, A4988-style StepStick pinout |
+| Controller | WeAct Studio STM32G474CEU6 "Long" core board |
+| Supply | 24 V DC |
+| Motor current | 1.19 A RMS (VREF 1.68 V) |
 
-The repository also holds a complete single-axis driver design:
+## Repository map
 
 | Path | Contents |
 |---|---|
-| `hardware/` | KiCad schematic, PDF, and project symbols for the NEMA 17 + TMC2209 + WeAct STM32G474CEU6 axis |
-| `firmware/` | PlatformIO firmware for STEP/DIR control and TMC2209 UART setup |
-| `board/` | WeAct STM32G474CEU6 pinout reference |
+| [`datasheets/`](datasheets/) | Manufacturer PDFs, source register, checksums |
+| [`hardware/`](hardware/) | KiCad schematic, shared symbols, board pinouts |
+| [`firmware/`](firmware/) | PlatformIO projects |
+| [`docs/`](docs/) | Architecture, roadmap, conventions, driver notes |
 
-## Start here
+## Quick start
 
-1. Read [`NEMA17-COMPREHENSIVE-DATASHEET.md`](NEMA17-COMPREHENSIVE-DATASHEET.md).
-2. Find your motor in the comparison table.
-3. Open the matching PDF in [`datasheets/`](datasheets/).
-4. Check the original file against [`datasheets/SOURCES.md`](datasheets/SOURCES.md).
+1. Read the [schematic PDF](hardware/kicad/axis-tmc2209/NEMA17-TMC2209.pdf).
+2. Read the [firmware README](firmware/axis-tmc2209-spin/README.md).
+3. Follow the [flash steps](firmware/axis-tmc2209-spin/README.md#flash-over-usb-dfu).
 
-## Files
+## Roadmap
 
-| File | Contents |
-|---|---|
-| `NEMA17-COMPREHENSIVE-DATASHEET.md` | Compiled reference: frame data, comparison tables, wiring, driver setup, selection guide |
-| `nema17-specs.csv` | The comparison table in machine-readable form |
-| `datasheets/` | 14 manufacturer datasheets, 1 standard excerpt, checksums |
-| `datasheets/SOURCES.md` | Source URL, publisher, page count, and SHA-256 for each file |
-| `datasheets/SHA256SUMS.txt` | Checksums for integrity checks |
+- [Phase 2: TB6600 module](docs/roadmap.md#phase-2-tb6600-module).
+- [Phase 3: second motor](docs/roadmap.md#phase-3-second-motor).
+- [Phase 4: CoreXY](docs/roadmap.md#phase-4-corexy).
 
-## Coverage
+## Sources and checks
 
-| Axis | Covered values |
-|---|---|
-| Step angle | 1.8° (200 steps/rev) and 0.9° (400 steps/rev) |
-| Body length | 20 mm to 63 mm |
-| Rated current | 0.16 A to 2.8 A per phase |
-| Holding torque | 10 Ncm to 88 Ncm |
-| Windings | 4-lead bipolar, 6-lead unipolar/bipolar |
-| Extras | Torque curves, dimension drawings, NEMA ICS 16 flange excerpt |
+The source URL and the SHA-256 for each document are in
+[`datasheets/SOURCES.md`](datasheets/SOURCES.md).
 
-## Integrity check
+Check the files:
 
 ```sh
 cd datasheets
 sha256sum -c SHA256SUMS.txt
 ```
-
-## Limits
-
-- These files are manufacturer documents. This project did not measure a motor.
-- Motor vendors change parts without notice. Check the drawing for your exact batch.
-- Wire colours are not standardized. Measure the coil pairs before you connect a driver.
