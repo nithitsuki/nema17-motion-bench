@@ -43,6 +43,11 @@ the DIP settings in the firmware config.
 mode? Measure the input current. Which current setting suits the
 JK42HS48-1684-03F? See `docs/drivers/tb6600.md`.
 
+**Other option:** The B1206 module is also available. It has a 20 V to 120 V
+supply range and a 1.9 A to 6.0 A current range. Its minimum current is
+1.9 A, so it suits a NEMA 23 or NEMA 34, not the JK42HS48-1684-03F. It has
+full-step and half-step only. See `docs/drivers/b1206.md`.
+
 ## Phase 3: second motor
 
 **Goal:** Drive two motors from one board. Keep a separate current and

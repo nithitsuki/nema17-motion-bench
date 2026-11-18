@@ -34,6 +34,7 @@ content. The SHA-256 value is for the file as it sits under `datasheets/`.
 | `mcu/weact-stm32g474ceu6/WeAct-STM32G474CoreBoard-Long-V10-schematic.pdf` | WeAct Studio | https://raw.githubusercontent.com/WeActStudio/WeActStudio.STM32G474CoreBoard/master/Hardware/QFN48/WeAct-STM32G474CoreBoard_Long/WeAct-STM32G474CoreBoard_Long_V10%20SchDoc.pdf | 1 | `c8c5670359ae1a3d2ec069fc46d950722dc5a0e2a704621dc8c45fb1dcf9098b` |
 | `mcu/weact-stm32g474ceu6/STM32G474xE-datasheet-DS12288.pdf` | STMicroelectronics (copy via WeAct repository) | https://raw.githubusercontent.com/WeActStudio/WeActStudio.STM32G474CoreBoard/master/Doc/STM32G474xE_DS12288.pdf | 236 | `b018e20dbe34b63a43e49365518b186ef0e0e8e899deeabc1c9f53a3a10c1add` |
 | `standards/NEMA-ICS16-2001-flange-17-excerpt.pdf` | NEMA | https://smoothieware.github.io/Webif-pack/documentation/web/images/ics16.pdf | 2 | `e91ff53dc53e5f7dc2eaa9f3350b7fce38807818f3c50b0eb1098730a8aa04d1` |
+| `drivers/b1206/B1206-label.png` | Qinyi Electronics (QYSMT), vendor photo | https://www.qysmt.in/products/b1206-stepper-drive | 1 image | `8bb50e1f5865a8b742dd37f5d14af5f62e9236fad37bc0dcccae8a3f5320dc13` |
 
 ## Notes on individual files
 
@@ -136,6 +137,13 @@ The 2-page file is an extract of NEMA ICS 16-2001. Page 59 holds section
 4.1.2.3 and Figure 19. Page 60 holds Table 4 for inch dimension motors.
 The full standard has 187 pages. NEMA holds the copyright. The excerpt is
 for reference only.
+
+### B1206
+
+No manufacturer datasheet was found. The label photo comes from the QYSMT
+product page. The sys-motor page is a second reseller reference:
+<https://www.sys-motor.com/show.aspx?id=1399>. The two pages disagree on the
+supply range. The label does not state it.
 
 ### WeAct Studio and STMicroelectronics
 

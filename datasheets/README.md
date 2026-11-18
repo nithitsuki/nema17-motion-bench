@@ -14,6 +14,7 @@ in the reference document to find the sheet that matches your motor.
 | [`motors/nema17/`](motors/nema17/) | Motor drawings, catalogues, torque curves, compiled reference, CSV |
 | [`drivers/tmc2209/`](drivers/tmc2209/) | TMC2209 IC datasheet, evaluation boards, BIGTREETECH files |
 | [`drivers/tb6600/`](drivers/tb6600/) | TB6600HG datasheet, application note, 4 A module manual |
+| [`drivers/b1206/`](drivers/b1206/) | B1206 label data and vendor photo |
 | [`mcu/weact-stm32g474ceu6/`](mcu/weact-stm32g474ceu6/) | WeAct board schematic, STM32G474xE datasheet |
 | [`standards/`](standards/) | NEMA ICS 16 flange 17 excerpt |
 
@@ -76,6 +77,17 @@ The current design uses this driver.
 
 The TB6600 module uses 5 V logic. It sets current and microsteps with DIP
 switches. It has no UART. See [`../docs/drivers/tb6600.md`](../docs/drivers/tb6600.md).
+
+### B1206 (drivers/b1206/)
+
+| File | Coverage |
+|---|---|
+| `README.md` | Label data, 8 DIP switches, current table, terminal list |
+| `B1206-label.png` | Vendor photo of the label |
+
+The B1206 module uses opto-isolated inputs, 5 V typical. It sets current with SW6 to SW8 and
+step mode with SW3. It has full-step and half-step only. It has no UART. No
+manufacturer PDF exists. See [`../docs/drivers/b1206.md`](../docs/drivers/b1206.md).
 
 ## MCU files
 

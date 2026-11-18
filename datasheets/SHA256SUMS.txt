@@ -1,3 +1,4 @@
+8bb50e1f5865a8b742dd37f5d14af5f62e9236fad37bc0dcccae8a3f5320dc13  ./drivers/b1206/B1206-label.png
 229003f761bf4feed3b2e9e54d466a61e76aa59bfa077d8d66b675bb13ececb6  ./drivers/tb6600/Handson-TB6600-4A-module-manual.pdf
 fd9e252855700277e8172c32d0ffcbbbd3048c958d4823c2e9bbda65931dc177  ./drivers/tb6600/Toshiba-TB6600HG-application-note-AKX00354.pdf
 08333ba65b148288254f874d7088c910108aedba4ef50a4ee8951fb84065b7a9  ./drivers/tb6600/Toshiba-TB6600HG-datasheet-2016-06-10.pdf

@@ -13,6 +13,15 @@ source documents, the KiCad designs, and the firmware for each bench setup.
 | Supply | 24 V DC |
 | Motor current | 1.19 A RMS (VREF 1.68 V) |
 
+
+## Driver roster
+
+| Driver | Supply | Current | Microsteps | Control | Status |
+|---|---|---|---|---|---|
+| [BIGTREETECH TMC2209 V1.3](datasheets/drivers/tmc2209/) | 4.75 V to 28 V | 1.4 A RMS | 1/8 to 1/256 | STEP/DIR + UART | In use |
+| [TB6600 4 A module](docs/drivers/tb6600.md) | 9 V to 42 V | 0.5 A to 3.5 A | 1 to 1/32 | STEP/DIR + DIP | Available |
+| [B1206](docs/drivers/b1206.md) | 20 V to 120 V | 1.9 A to 6.0 A | 1, 1/2 | STEP/DIR + DIP | Available |
+
 ## Repository map
 
 | Path | Contents |

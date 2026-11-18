@@ -221,5 +221,6 @@ The module also has a 1×3 aux header J2. The order is INDEX, DIAG, VREF.
 ## Future
 
 - Add TB6600 wiring notes. The module needs 5 V logic and a DIP current setting.
+- Add B1206 wiring notes. The module needs a 20 V to 120 V supply and at least 1.9 A.
 - Add a CoreXY board with two TMC2209 sockets.
 - Add endstop connectors and a 5 V logic header for the TB6600.
